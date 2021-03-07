@@ -6,9 +6,10 @@
 </head>
 <body>
   <div class="bodybg">
-    <div id=survey>
+    <div id="survey">
 <h1 id=title> Dog Adoption Survey Form</h1>
-<p id=description>All potential fosters and adoptors must fill this out and we will get back to you as soon as we can.</p>
+<p id=description>All potential fosters and adoptors must fill this entire application out and we will get back to you as soon as we can.</p>
+<div class="container">
 <form id=survey-form>
     <label for="name" id="name-label">First and last name</label> 
     <br>
@@ -16,11 +17,11 @@
     <br>
     <label for="age">Age</label> 
     <br>
-    <input type="number" id="age" name="age" min="18" max="120" placeholder="Age">   
+    <input type="number" id="age" required name="age" min="18" max="120" placeholder="Age">   
     <br>
     <label for="location">Location: </label>
     <br>
-    <input type=text required id="location" name="location" placeholder="Location">  
+    <input type=text required id="location" required name="location" placeholder="Location">  
     <br>
     <label for="email" id="email-label">Email:</label> 
     <br>
@@ -28,9 +29,47 @@
     <br>
     <label for="number" id="number-label">How many pets do you have currently?</label> 
     <br>
-    <input id="number" type="number" name="petnumber" min="0" max="6" placeholder="Number of pets"> 
-  </div>
-</form>
+    <input id="number" type="number" name="petnumber" min="0" max="6" placeholder="Number of pets" required> 
+<br>
+<label for="goal">Please select your goal:</label><br>
+  <select id="goal" required name="goal" form id="survey">
+    <option value="foster"> Foster </option>
+    <option value="Adopt">Adoption</option>    
+    <option value="fostad">Foster Maybe Adopt</option>
+  </select>
+  <br>
+  <label for="radio"> How many hours of excersize are you willing to give the Dog</label><br>
+<input type="radio" id="radio" required form="survey" name="excersize" value="0-1">
+<label for="0-1">0-1</label><br>
+<input type="radio" id="radio" form="survey" name="excersize" value="2-3" required>
+<label for="2-3">2-3</label>
+  <br>
+<input type="radio" id="radio" form="survey" name="excersize" value="4" required>
+<label for="4">4+</label>
+<br>
 </div>
+<label for="checkbox"><h3><strong>Caring for a pet is big a responsibility - check all that apply!</h3></label></strong><p>
+<br>
+<input type="checkbox" id="checkbox" name="checkbox" form id="survey-form" value="money-cost" required>
+<label for="costs" class="checklabel">I understand a dog requires spending money to keep the adoptee alive</label>  
+<br>
+<input type="checkbox" id="checkbox" name="checkbox" form id="survey-form" value="dog-space" required>
+<label for="costs" class="checklabel">I have adequate space in a safe and secure enviorment outside the home</label> 
+<br>
+<input type="checkbox" id="checkbox" name="checkbox" form id="survey-form" value="happy-dog" required> 
+<label for="costs" class="checklabel">I will give enough excerise and mental stimulation to keep them happy</label> 
+<br>
+<input type="checkbox" id="checkbox" name="checkbox" form id="survey-form" value="surrdener" required>
+<label for="costs" class="checklabel">I will re-surrender the animal if it becomes a burden to where care may be</label>
+<br>
+<div class="container">
+<label for="comment"><p id=textarea><strong>Please tell us why you would like to foster or adopt </p></strong></label>
+<textarea id="comment" name="comment" form-id="survey-form" required rows="4" cols="50">Describe in detail</textarea>
+<br>
+<button type="submit" id="submit" name="submit" value="submit">Submit Form</button>
+</div>
+ </div>
+</div>
+</form>
 </body>
 </html>
