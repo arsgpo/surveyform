@@ -1,29 +1,47 @@
 body {
-    font-family:arial;
-    
+  font-family:arial;
+  
 }
 
-  .bodybg::before {
-    content:"";
-    background-image:url("background.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.65;
-  }
+.bodybg::before {
+  content:"";
+  background-image:url("background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.65;
+}
+
 
 h1,
-h3 {
-  text-align: center;
+p {
+text-align: center;
 }
+
 .container {
-  text-align: center;
-  width: auto;
+width: 100%;
+text-align:center;
+margin:auto;
+}
+
+
+
+#checkcon {
+display:flex;
+flex-flow:column;
+margin-left:4%;
+}
+
+
+.namegroup {
+display:block;
+margin: 0 auto;
+padding: 4px;
 }
 
 #survey {
@@ -35,46 +53,38 @@ border-radius: 15px;
 text-shadow: 1px 1px 1px rgba(38, 92, 209, 0.459);
 border-width: 1.8px;
 border-style: solid;
-text-align:left;
-padding-left: 20px;
-
 }
 
-input {
-    margin-bottom: 20px;
-    margin-top: 5px;
-    position:relative;
-  }
 
 label {
-  position: relative;
-}
-  
-#goal {
-  width:30%;
-  line-height: inherit;
-  background-color: white;
-  color:rgb(105, 102, 102);
-  margin-bottom:15px; 
-}
-  
-.checklabel{
-  display: flex-box;
-align-items: center;
+display:inline-block;
+padding-top: 15px;
+padding-bottom: 10px;
 }
 
-#checkbox {
-  display: flex-box;
-align-items: center;
-}
-#addcomment {
-margin-top:40px;
+
+#dropdown {
+width:30%;
+line-height:inherit;
+background-color: white;
+color:rgb(105, 102, 102);
 }
 
-#submit {
-  margin-top:20px;
-  margin-bottom: 20px;
-  height: 40px;
-  box-shadow: 1px 1px black;
-  background-color:rgba(134, 185, 243, 0.7);
+#comment {
+display:block;
+margin:auto;
+margin-top:10px;
+}
+
+button {
+display:inline-block;
+position:relative;
+margin-top:20px;
+margin-bottom: 20px;
+height: 40px;
+width:50%;
+font-size: 15px;
+box-shadow: 1px 1px black;
+background-color:rgba(134, 185, 243, 0.7);
+cursor: pointer;
 }
